@@ -58,10 +58,35 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 
 **Schema:**
 - `review` (text): Raw movie review text
-- `aspect` (string): Aspect label (e.g., "positive", "negative")
-- `aspect_encoded` (int): Numeric label for classification
+- `aspect` (string): Aspect category ("Cinematography", "Characters", "Story")
+- `aspect_encoded` (int): Numeric encoding (0=Cinematography, 1=Characters, 2=Story)
 
-**Learning Focus:** Text classification with aspect-based sentiment analysis
+**Learning Focus:** Aspect-based text classification (369 training samples, 3 balanced classes)
+
+---
+
+## 🏆 Learning Progress
+
+### ✅ Completed Milestones
+- [x] **Notebook 00**: Pipeline overview and mental model established
+- [x] **Notebook 01**: Data exploration completed - discovered 3-class aspect classification
+- [ ] **Notebook 02**: Tokenization and preprocessing pipeline
+- [ ] **Notebook 03**: Vocabulary building and encoding
+- [ ] **Notebook 04**: Padding, tensors, and DataLoader setup
+- [ ] **Notebook 05**: Baseline neural network implementation
+- [ ] **Notebook 06**: Training loop and evaluation metrics
+- [ ] **Notebook 07**: TinyBERT setup and layer freezing
+- [ ] **Notebook 08**: Fine-tuning with experimental learning rate
+- [ ] **Notebook 09**: Performance comparison and analysis
+
+### 🎯 Current Status
+**Phase 1 Complete**: Data understanding and exploration
+- ✅ Dataset loaded and inspected (369 training, ~130 test samples)
+- ✅ 3-class aspect classification identified (Cinematography, Characters, Story)
+- ✅ Balanced class distribution confirmed (~125 samples per class)
+- ✅ Key variables established (`n_aspects=3`, text/label arrays ready)
+
+**Next Phase**: Text preprocessing and tokenization pipeline
 
 ---
 

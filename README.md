@@ -72,7 +72,7 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - [x] **Notebook 01**: Data exploration completed - discovered 3-class aspect classification
 - [x] **Notebook 02**: Tokenization pipeline completed - identified limitations of simple tokenization
 - [x] **Notebook 03**: Vocabulary building completed - created 1002-word vocabulary with proper encoding
-- [ ] **Notebook 04**: Padding, tensors, and DataLoader setup
+- [x] **Notebook 04**: Padding and tensor conversion completed - ready for neural network training
 - [ ] **Notebook 05**: Baseline neural network implementation
 - [ ] **Notebook 06**: Training loop and evaluation metrics
 - [ ] **Notebook 07**: TinyBERT setup and layer freezing
@@ -80,7 +80,7 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - [ ] **Notebook 09**: Performance comparison and analysis
 
 ### 🎯 Current Status
-**Phase 3 Complete**: Vocabulary building and text encoding
+**Phase 4 Complete**: Padding, tensor conversion, and DataLoader setup
 - ✅ Dataset loaded and inspected (369 training, ~130 test samples)
 - ✅ 3-class aspect classification identified (Cinematography, Characters, Story)
 - ✅ Balanced class distribution confirmed (~125 samples per class)
@@ -91,8 +91,11 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - ✅ Vocabulary dictionary created: 1002 words (1000 most frequent + 2 special tokens)
 - ✅ Text encoding implemented: words → integers with unknown word handling
 - ✅ Encoded sequences ready for tensor conversion
+- ✅ Padding function implemented: variable sequences → fixed length (128)
+- ✅ PyTorch tensors created: `X_tensor [369, 128]`, `y_tensor [369]`
+- ✅ DataLoader ready for batch processing (batch_size=16, shuffle=True)
 
-**Next Phase**: Padding, tensor conversion, and DataLoader setup
+**Next Phase**: Baseline neural network implementation with embedding layers
 
 ---
 

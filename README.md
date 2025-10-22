@@ -70,7 +70,7 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 ### ✅ Completed Milestones
 - [x] **Notebook 00**: Pipeline overview and mental model established
 - [x] **Notebook 01**: Data exploration completed - discovered 3-class aspect classification
-- [ ] **Notebook 02**: Tokenization and preprocessing pipeline
+- [x] **Notebook 02**: Tokenization pipeline completed - identified limitations of simple tokenization
 - [ ] **Notebook 03**: Vocabulary building and encoding
 - [ ] **Notebook 04**: Padding, tensors, and DataLoader setup
 - [ ] **Notebook 05**: Baseline neural network implementation
@@ -80,13 +80,16 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - [ ] **Notebook 09**: Performance comparison and analysis
 
 ### 🎯 Current Status
-**Phase 1 Complete**: Data understanding and exploration
+**Phase 2 Complete**: Text preprocessing and tokenization
 - ✅ Dataset loaded and inspected (369 training, ~130 test samples)
 - ✅ 3-class aspect classification identified (Cinematography, Characters, Story)
 - ✅ Balanced class distribution confirmed (~125 samples per class)
 - ✅ Key variables established (`n_aspects=3`, text/label arrays ready)
+- ✅ Tokenization function implemented with regex pattern `r'\b\w+\b'`
+- ✅ Tokenized corpus created for vocabulary building
+- ✅ Identified limitations: contractions, emojis, punctuation loss
 
-**Next Phase**: Text preprocessing and tokenization pipeline
+**Next Phase**: Vocabulary building and text encoding
 
 ---
 

@@ -71,7 +71,7 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - [x] **Notebook 00**: Pipeline overview and mental model established
 - [x] **Notebook 01**: Data exploration completed - discovered 3-class aspect classification
 - [x] **Notebook 02**: Tokenization pipeline completed - identified limitations of simple tokenization
-- [ ] **Notebook 03**: Vocabulary building and encoding
+- [x] **Notebook 03**: Vocabulary building completed - created 1002-word vocabulary with proper encoding
 - [ ] **Notebook 04**: Padding, tensors, and DataLoader setup
 - [ ] **Notebook 05**: Baseline neural network implementation
 - [ ] **Notebook 06**: Training loop and evaluation metrics
@@ -80,7 +80,7 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - [ ] **Notebook 09**: Performance comparison and analysis
 
 ### 🎯 Current Status
-**Phase 2 Complete**: Text preprocessing and tokenization
+**Phase 3 Complete**: Vocabulary building and text encoding
 - ✅ Dataset loaded and inspected (369 training, ~130 test samples)
 - ✅ 3-class aspect classification identified (Cinematography, Characters, Story)
 - ✅ Balanced class distribution confirmed (~125 samples per class)
@@ -88,8 +88,11 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - ✅ Tokenization function implemented with regex pattern `r'\b\w+\b'`
 - ✅ Tokenized corpus created for vocabulary building
 - ✅ Identified limitations: contractions, emojis, punctuation loss
+- ✅ Vocabulary dictionary created: 1002 words (1000 most frequent + 2 special tokens)
+- ✅ Text encoding implemented: words → integers with unknown word handling
+- ✅ Encoded sequences ready for tensor conversion
 
-**Next Phase**: Vocabulary building and text encoding
+**Next Phase**: Padding, tensor conversion, and DataLoader setup
 
 ---
 

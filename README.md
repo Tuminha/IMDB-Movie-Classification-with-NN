@@ -73,14 +73,14 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - [x] **Notebook 02**: Tokenization pipeline completed - identified limitations of simple tokenization
 - [x] **Notebook 03**: Vocabulary building completed - created 1002-word vocabulary with proper encoding
 - [x] **Notebook 04**: Padding and tensor conversion completed - ready for neural network training
-- [ ] **Notebook 05**: Baseline neural network implementation
+- [x] **Notebook 05**: Baseline neural network completed - SimpleNN with embedding layers and mean pooling
 - [ ] **Notebook 06**: Training loop and evaluation metrics
 - [ ] **Notebook 07**: TinyBERT setup and layer freezing
 - [ ] **Notebook 08**: Fine-tuning with experimental learning rate
 - [ ] **Notebook 09**: Performance comparison and analysis
 
 ### 🎯 Current Status
-**Phase 4 Complete**: Padding, tensor conversion, and DataLoader setup
+**Phase 5 Complete**: Baseline neural network implementation
 - ✅ Dataset loaded and inspected (369 training, ~130 test samples)
 - ✅ 3-class aspect classification identified (Cinematography, Characters, Story)
 - ✅ Balanced class distribution confirmed (~125 samples per class)
@@ -94,8 +94,11 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - ✅ Padding function implemented: variable sequences → fixed length (128)
 - ✅ PyTorch tensors created: `X_tensor [369, 128]`, `y_tensor [369]`
 - ✅ DataLoader ready for batch processing (batch_size=16, shuffle=True)
+- ✅ SimpleNN model implemented: embedding layers + mean pooling + classification
+- ✅ Model architecture: Word IDs → Embeddings → Masking → Pooling → Linear layers
+- ✅ Training components ready: CrossEntropyLoss + Adam optimizer (lr=0.005)
 
-**Next Phase**: Baseline neural network implementation with embedding layers
+**Next Phase**: Training loop implementation and baseline evaluation
 
 ---
 

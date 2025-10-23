@@ -229,15 +229,21 @@ jupyter notebook
 3. **Comparison Analysis** (1-2 paragraphs explaining differences)
 4. **Learning Journal Entries** (at least one per completed notebook)
 
-### Sample Results Structure
+### Actual Results Achieved
 ```
 | Metric      | Baseline | TinyBERT | Improvement |
 |-------------|----------|----------|-------------|
-| Accuracy    | 0.65     | 0.72     | +10.8%      |
-| F1 (macro)  | 0.63     | 0.70     | +11.1%      |
-| Precision   | 0.64     | 0.71     | +10.9%      |
-| Recall      | 0.62     | 0.69     | +11.3%      |
+| Accuracy    | 0.49     | 0.94     | +91%        |
+| F1 (macro)  | 0.48     | 0.94     | +94%        |
+| Precision   | 0.55     | 0.94     | +72%        |
+| Recall      | 0.51     | 0.94     | +84%        |
 ```
+
+**Key Insights:**
+- Transfer learning with TinyBERT achieved **94% accuracy** vs baseline's 49%
+- Early stopping at epoch 26 found optimal checkpoint automatically
+- Learning rate 5e-4 was the "Goldilocks zone" - fast convergence without oscillation
+- Strategic layer freezing (95% frozen) prevented catastrophic forgetting
 
 ---
 
@@ -290,12 +296,23 @@ jupyter notebook
 
 ## 🚀 Next Steps
 
-After completing this repository:
-- [ ] Experiment with different vocabulary sizes
-- [ ] Try different embedding dimensions
-- [ ] Implement attention visualization
-- [ ] Compare with other transformer models
+### Completed ✅
+- [x] Built complete NLP pipeline from scratch (tokenization → vocab → baseline NN)
+- [x] Fine-tuned TinyBERT with transfer learning (94% accuracy achieved)
+- [x] Implemented early stopping with patience mechanism
+- [x] Compared baseline vs transformer approaches comprehensively
+- [x] Consolidated learning reflections in lab notes
+
+### Potential Extensions
+- [ ] Error analysis on 8 misclassified TinyBERT samples
+- [ ] Experiment with unfreezing more layers (layers 2-3 instead of just layer 3)
+- [ ] Implement learning rate scheduling (start high, decay over time)
+- [ ] Try different vocabulary sizes (500, 2000, 5000 words)
+- [ ] Compare with larger models (BERT-Base vs TinyBERT)
+- [ ] Implement data augmentation (back-translation, paraphrasing)
 - [ ] Apply to different text classification tasks
+- [ ] Explore attention visualization techniques
+- [ ] Build ensemble methods (multiple TinyBERT models with different seeds)
 
 ---
 

@@ -124,11 +124,11 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 ### 📈 Training Visualizations:
 
 #### Baseline Model Performance:
-![Baseline Training vs Test](images/trainning_loss_and_accuracy_vs_test_accuracy_and_loss.png)
-![Baseline Confusion Matrix](images/Confusion_matrix.png)
+![Baseline Training vs Test](images/trainning%20loss%20and%20accuracy%20vs%20test%20accuracy%20and%20loss%20.png)
+![Baseline Confusion Matrix](images/Confusion%20matrix.png)
 
 #### TinyBERT Training with Early Stopping:
-![TinyBERT Training Analysis](images/training_and_validation_curves_50_epochs_with_patience_=_5.png)
+![TinyBERT Training Analysis](images/training%20and%20validation%20curves%2050%20epochs%20with%20patience%20%3D%205.png)
 
 **Next Phase**: Final evaluation and comprehensive comparison (Notebook 09)
 

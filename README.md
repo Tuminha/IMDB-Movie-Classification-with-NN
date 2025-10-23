@@ -74,13 +74,13 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - [x] **Notebook 03**: Vocabulary building completed - created 1002-word vocabulary with proper encoding
 - [x] **Notebook 04**: Padding and tensor conversion completed - ready for neural network training
 - [x] **Notebook 05**: Baseline neural network completed - SimpleNN with embedding layers and mean pooling
-- [ ] **Notebook 06**: Training loop and evaluation metrics
+- [x] **Notebook 06**: Training and evaluation completed - baseline model achieves 49% test accuracy with clear overfitting
 - [ ] **Notebook 07**: TinyBERT setup and layer freezing
 - [ ] **Notebook 08**: Fine-tuning with experimental learning rate
 - [ ] **Notebook 09**: Performance comparison and analysis
 
 ### 🎯 Current Status
-**Phase 5 Complete**: Baseline neural network implementation
+**Phase 6 Complete**: Baseline model training and evaluation
 - ✅ Dataset loaded and inspected (369 training, ~130 test samples)
 - ✅ 3-class aspect classification identified (Cinematography, Characters, Story)
 - ✅ Balanced class distribution confirmed (~125 samples per class)
@@ -97,8 +97,23 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - ✅ SimpleNN model implemented: embedding layers + mean pooling + classification
 - ✅ Model architecture: Word IDs → Embeddings → Masking → Pooling → Linear layers
 - ✅ Training components ready: CrossEntropyLoss + Adam optimizer (lr=0.005)
+- ✅ Training loop implemented with evaluation on both train and test sets
+- ✅ Baseline model trained for 50 epochs: Train accuracy 70%, Test accuracy 49%
+- ✅ Overfitting identified: Gap appears after epoch 40
+- ✅ Confusion matrix analysis: Model biased toward predicting "Characters" class
+- ✅ Performance metrics: F1-scores range 0.45-0.54 across aspect classes
 
-**Next Phase**: Training loop implementation and baseline evaluation
+### 📊 Baseline Model Results:
+- **Test Accuracy**: 49.24% (vs 33% random baseline = 16% improvement)
+- **Training Accuracy**: 70% (21% overfitting gap)
+- **Best Class**: Characters (F1: 0.54, Recall: 0.82)
+- **Weakest Classes**: Cinematography & Story (F1: 0.45-0.46)
+- **Key Finding**: Model exhibits bias toward "Characters" predictions (46 misclassifications)
+
+![Training vs Test Performance](images/trainning_loss_and_accuracy_vs_test_accuracy_and_loss.png)
+![Confusion Matrix](images/Confusion_matrix.png)
+
+**Next Phase**: TinyBERT setup and transfer learning
 
 ---
 

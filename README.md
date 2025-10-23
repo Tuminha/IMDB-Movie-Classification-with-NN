@@ -77,10 +77,10 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - [x] **Notebook 06**: Training and evaluation completed - baseline model achieves 49% test accuracy with clear overfitting
 - [x] **Notebook 07**: TinyBERT setup and layer freezing - loaded pre-trained model, froze layers strategically
 - [x] **Notebook 08**: Fine-tuning with early stopping - achieved 0.1045 test loss (90% improvement vs baseline)
-- [ ] **Notebook 09**: Performance comparison and analysis
+- [x] **Notebook 09**: Performance comparison and analysis - **94% accuracy achieved! Project complete!** 🎉
 
 ### 🎯 Current Status
-**Phase 8 Complete**: TinyBERT fine-tuning with early stopping
+**🎉 PROJECT COMPLETE! Phase 9: Final Evaluation and Comparison**
 
 #### **Phase 1-6: Baseline Pipeline** ✅
 - ✅ Dataset loaded and inspected (369 training, ~130 test samples)
@@ -106,20 +106,42 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 - ✅ Professional visualizations: loss curves + overfitting gap analysis
 - ✅ Model saved to `src/models/tinybert_best.pth`
 
-### 📊 Model Comparison:
+#### **Phase 9: Final Evaluation & Comparison** ✅
+- ✅ Loaded both models from checkpoints for fair comparison
+- ✅ Evaluated on identical test set (132 samples)
+- ✅ **TinyBERT achieved 94% accuracy** vs baseline's 49%
+- ✅ Comprehensive metrics: Precision, Recall, F1-Score all ~94% for TinyBERT
+- ✅ Confusion matrix analysis: TinyBERT shows balanced predictions (43, 37, 44 on diagonal)
+- ✅ Baseline showed severe bias toward "Characters" class (77/132 predictions)
+- ✅ All aspect categories improved dramatically with TinyBERT
 
-| Model | Test Loss | Test Accuracy (est.) | Overfitting Gap | Training Efficiency |
-|-------|-----------|---------------------|----------------|-------------------|
-| **Baseline (SimpleNN)** | 1.08 | ~49% | 0.40 (severe) | 50 epochs |
-| **TinyBERT (Best)** | **0.1045** | ~?? | **0.0663** (excellent) | 26 epochs ⭐ |
-| **Improvement** | **-90%** | **TBD** | **-83%** | **48% faster** |
+### 📊 Final Model Comparison:
+
+| Model | Test Loss | Test Accuracy | Precision | Recall | F1-Score | Training Epochs |
+|-------|-----------|---------------|-----------|--------|----------|----------------|
+| **Baseline (SimpleNN)** | 1.08 | **49%** | 55% | 51% | 48% | 50 epochs |
+| **TinyBERT (Fine-tuned)** | **0.1045** | **94%** ⭐ | **94%** | **94%** | **94%** | 26 epochs |
+| **Improvement** | **-90%** | **+91%** | **+72%** | **+84%** | **+94%** | **48% faster** |
+
+### 🎯 Per-Class Performance:
+
+| Aspect | Baseline Recall | TinyBERT Recall | Improvement |
+|--------|----------------|-----------------|-------------|
+| **Cinematography** | 37% (18/49) | **88%** (43/49) | **+139%** |
+| **Characters** | 82% (31/38) | **97%** (37/38) | **+18%** |
+| **Story** | 36% (16/45) | **98%** (44/45) | **+173%** 🚀 |
 
 ### 🎯 Key Achievements:
+- ✅ **91% improvement in test accuracy** (49% → 94%)
 - ✅ **90% reduction in test loss** (1.08 → 0.1045)
-- ✅ **83% reduction in overfitting gap** (0.40 → 0.0663)
+- ✅ **94% improvement in F1-Score** (48% → 94%)
+- ✅ **Near-perfect Story classification**: 98% recall (44/45 correct)
+- ✅ **Near-perfect Characters classification**: 97% recall (37/38 correct)
+- ✅ **Eliminated class bias**: Balanced predictions across all aspects
+- ✅ **83% reduction in overfitting gap** (21% → 6.6%)
 - ✅ **Early stopping prevented 24 wasted epochs** (stopped at 31 instead of 50)
-- ✅ **Learning rate optimization**: 5e-4 was 10x better than 1e-5 and 4x better than 2.5e-3
-- ✅ **Transfer learning validated**: Pre-trained knowledge dramatically improved performance
+- ✅ **Learning rate optimization**: 5e-4 was optimal (10x better than 1e-5, 4x better than 2.5e-3)
+- ✅ **Transfer learning validated**: Pre-trained knowledge >>> training from scratch
 
 ### 📈 Training Visualizations:
 
@@ -130,7 +152,10 @@ This repository is a **learning scaffold** that teaches NLP through incremental 
 #### TinyBERT Training with Early Stopping:
 ![TinyBERT Training Analysis](images/training%20and%20validation%20curves%2050%20epochs%20with%20patience%20%3D%205.png)
 
-**Next Phase**: Final evaluation and comprehensive comparison (Notebook 09)
+#### Final Model Comparison - Confusion Matrices:
+![Model Comparison](images/confusion_matrix_comparison.png)
+
+**Project Status**: ✅ **COMPLETE** - All notebooks finished, 94% accuracy achieved!
 
 ---
 
